@@ -1,0 +1,481 @@
+:root,
+body.dark-theme {
+  --color-foreground: #171717;
+  --color-breadcrumb: #4a4a4a;
+  --color-toc-hover: #4c4c4c;
+  --color-background: #ffffff;
+  --color-background-subnav: #f5f5f5;
+  --color-background-dark: #034975;
+  --color-background-table-alt: #f9f9f9;
+}
+
+body.light-theme {
+  --color-foreground: #171717;
+  --color-breadcrumb: #4a4a4a;
+  --color-toc-hover: #4c4c4c;
+  --color-background: #ffffff;
+  --color-background-subnav: #f5f5f5;
+  --color-background-dark: #034975;
+  --color-background-table-alt: #f9f9f9;
+  --color-background-below-navbar: #003130;
+}
+
+:root {
+  --PA_blue: #207CCC;
+}
+
+#logo {
+  width: 110px;
+  height: 28px;
+}
+body {
+  color: var(--color-foreground);
+  line-height: 1.5;
+  font-size: 14.4px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  word-wrap: break-word;
+  background-color: var(--color-background);
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0.67em 0;
+}
+h3 {
+  font-size: 1.15em;
+  margin: 0.67em 0;
+}
+
+.navbar-brand > img {
+  color: var(--color-background);
+}
+h4 {
+  font-size: 1.0em;
+}
+
+.navbar {
+  border: none;
+}
+
+.subnav {
+  border-top: 1px solid var(--color-underline);
+  background-color: var(--color-background-subnav);
+}
+
+.navbar-inverse {
+  background-color: var(--color-background-dark);
+  z-index: 100;
+}
+
+.navbar-inverse .navbar-nav > li > a,
+.navbar-inverse .navbar-text {
+  color: var(--color-background-below-navbar);
+  background-color: white;
+  border-bottom: 3px solid transparent;
+  transition: all ease 0.25s;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #003130;
+  background-color: white;
+  font-weight: bold;
+  border-bottom: 3px solid transparent;
+  transition: all ease 0.25s;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
+  color: var(--color-background-below-navbar);
+  background-color: white;
+  border-bottom: 3px solid transparent;
+  transition: all ease 0.25s;
+  margin-left: 1rem;
+  margin-top: 14px;
+  text-decoration: none;
+}
+
+.navbar-form .form-control {
+  border: none;
+}
+
+.light-theme .navbar-brand svg {
+  filter: brightness(20%);
+}
+
+/* Alerts (also in docfx.css) */
+.alert {
+  background-color: inherit;
+  border: none;
+  padding: 10px 0;
+  border-radius: 0;
+}
+
+.alert > p {
+  margin-bottom: 0;
+  padding: 5px 10px;
+  border-bottom: 1px solid;
+  background-color: var(--color-background-dark);
+}
+
+.alert > h5 {
+  padding: 10px 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-top: 2px solid;
+  background-color: var(--color-background-dark);
+  border-radius: none;
+}
+
+.alert > ul {
+  margin-bottom: 0;
+  padding: 5px 40px;
+}
+/* Notes should not use a simlar blue to the link colour because they are not clickable OR notes are blue if links are always a consistent colour that is separate from the brand colours - see Task 18167   */
+.alert-info {
+  background-color: #c7e0f7;
+  padding: 0px 6px;
+  border-left: 6px solid #2196f3;
+}
+p.Note {
+  color: #093e58;
+}
+p.Note:before {
+  content: "Note: ";
+  color: #093e58;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* Tips should be de-emphasized - see Task 18167. Also, Examples should have their own indication similar to notes and tips - reconsider colours bc Monitor-Purple is a thing*/
+.alert-tip {
+  color: #000000;
+  padding: 0px 6px;
+  background-color: #ebeec8;
+  border-left: 6px solid #ecea66;
+}
+p.Tip {
+  color: #000000;
+}
+p.Tip:before {
+  content: "Tip: ";
+  color: #000000;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+p.Example
+{
+	border-radius: 1px;
+	border: solid 1px #786ed4;
+	overflow: hidden;
+	color: #000000;
+}
+
+p.Example:before
+{
+	content: 'Example: ';
+	border: none 0px;
+	font-weight: bold;
+	color: #786ed4;
+}
+
+div.Example	/* Use if you want include other elements in a Example - based on Madcap article: http://www.madcapsoftware.com/blog/2015/11/23/five-ways-improve-madcap-flare-project-part-1-using-examples-documentation/ */
+{
+	border-radius: 1px;
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+	border: solid 1px #786ed4;
+  margin-bottom: 3px;
+}
+
+p.Example_Div	/*use for the "Example:" prefix and the intro text to the example. */
+{
+	padding-top: 6px;
+	padding: 3px;
+	margin-left: 28px;
+	margin-bottom: 3px;
+	margin-top: 0px;
+	color: #000000;
+}
+
+p.Example_Div:before
+{
+	content: 'Example: ';
+	border: none 0px;
+	font-weight: bold;
+	color: #786ed4;
+}
+
+div.Example p.Example_Div
+{
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 3px;
+}
+
+p.Caution
+{
+	padding-top: 6px;
+	padding: 3px;
+	border-radius: 1px;
+	background-color: #fac738;
+	border: solid 1px #fac738;
+	overflow: hidden;
+}
+
+p.Caution:before
+{
+	content: 'Caution: ';
+	border: none 0px;
+	font-weight: bold;
+	color: #003130;
+}
+
+.alert-imp {
+  color: #003130;
+  background-color: #b9eedc;
+  border-color: #deeee5;
+  padding: 0px 12px;
+  border-left: 6px solid #92e9da;
+}
+.alert-war {
+  color: #003130;
+  background-color: #fac738;
+  border-color: #fac738;
+  padding: 0px 12px;
+  border-left: 6px solid #fac738;
+}
+
+.Additional_info {  /*use this box for key information in a procedure so that it breaks up the steps */
+  color: #003130;
+  background-color: #f4f8fd;
+  border: 1px solid var(--PA_blue);
+  border-radius: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 6px;
+  padding-bottom: 0px;
+}
+
+.Additional_info_header {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.ProcIntro {
+  font-weight: bold;
+
+}
+
+.hljs {
+  color: var(--color-foreground);
+}
+
+.affix ul ul > li > a:before {
+  content: "|";
+}
+
+/* .breadcrumb {
+  background-color: var(--color-background-subnav);
+} */
+
+/* .breadcrumb .label.label-primary {
+  background: #444;
+  border-radius: 0;
+  font-weight: normal;
+  font-size: 100%;
+} */
+/* 
+#breadcrumb .breadcrumb>li a {
+  border-radius: 0;
+  font-weight: normal;
+  font-size: 16px;
+  display: inline;
+  padding: 0 .6em 0;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  color: var(--color-breadcrumb);
+}
+
+#breadcrumb .breadcrumb>li a:hover {
+  color: var(--color-foreground);
+  transition: all ease 0.25s;
+}
+
+.breadcrumb>li+li:before {
+  font-size: 75%;
+  color: var(--color-background-dark);
+  padding: 0;
+}
+
+.light-theme .breadcrumb>li+li:before {
+  color: var(--color-foreground)
+ } */
+
+.form-control {
+  background-color: var(--color-background-subnav);
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.multiply {
+  color: #ca3434;
+  font-size: 15px;
+}
+.check {
+  color: #268350;
+  font-size: 18px;
+}
+input#search-query:focus {
+  color: var(--color-foreground);
+}
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 10px;
+  font-size: 110%;
+  border-left: 5px solid var(--color-background-quote);
+  color: var(--color-background-quote);
+}
+
+.pagination > .disabled > a,
+.pagination > .disabled > a:focus,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > span,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > span:hover {
+  background-color: var(--color-background-subnav);
+  border-color: var(--color-background-subnav);
+}
+
+/* .breadcrumb>li, .pagination {
+  display: inline;
+} */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #337ab7;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #337ab7;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(19px);
+  -ms-transform: translateX(19px);
+  transform: translateX(19px);
+}
+
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.toggle-mode .icon {
+  display: inline-block;
+}
+
+.toggle-mode .icon i {
+  font-style: normal;
+  font-size: 17px;
+  display: inline-block;
+  padding-right: 7px;
+  padding-left: 7px;
+  vertical-align: middle;
+}
+
+.article img {
+  max-width: 100%;
+  max-height: 80%;
+  box-sizing: inherit;
+  outline-color: inherit;
+  height: auto;
+  display: inline-block;
+  border: 1.8px solid #ddd;
+}
+
+p.ProcIntro {
+  font-weight: bold;
+}
+
+/* Definition lists */
+
+dl {
+  margin-left: 10px;
+} 
+
+dt {
+  font-size: 13px;
+}
+
+dd {
+  margin-left: 8px;
+  padding-bottom: 8px;
+  font-size: 14px;
+  font-weight: normal;
+}

@@ -1,0 +1,16 @@
+- name: FILE 1
+  href: ../Content.md
+- name: Nested TOCs
+  items:
+  - name: Nested 1
+    items:
+    - name: Introduction
+      href: ../Content.md#introduction
+    - name: Some Paragraph
+      href: ../Content.md#some-paragraph
+  - name: Nested 2
+    items:
+    - name: Introduction
+      href: ../Content.md#introduction
+    - name: Some Paragraph
+      href: ../Content.md#some-paragraph
